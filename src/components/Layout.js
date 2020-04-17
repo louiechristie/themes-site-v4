@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, Box } from "theme-ui"
-import Header from "./Header.js"
-import Footer from "./Footer.js"
+import Header from "./header/Header"
+import Footer from "./Footer"
 import { Global } from "@emotion/core"
 import { globalStyles } from "../styles/GlobalStyles"
 import { Grommet } from "grommet"

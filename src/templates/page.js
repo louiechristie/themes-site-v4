@@ -27,10 +27,10 @@ const Page = ({ data }) => {
   return (
     <Layout>
       <Container>
-        <h1
+        {/* <h1
           className="page-title"
           dangerouslySetInnerHTML={{ __html: title }}
-        />
+        /> */}
         {content && (
           <Box className="entry-content" sx={{ ...gutenberg }}>
             <ParsedContent content={content} />

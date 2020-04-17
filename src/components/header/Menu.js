@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import { graphql, useStaticQuery, Link } from "gatsby"
-import { createLocalLink } from "../utils"
+import { createLocalLink } from "../../utils"
 
 const MENU_QUERY = graphql`
   fragment MenuFields on WpMenuItem {
