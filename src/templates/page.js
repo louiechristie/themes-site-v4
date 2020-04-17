@@ -36,7 +36,8 @@ const Page = ({ data }) => {
             <ParsedContent content={content} />
           </Box>
         )}
-        {flexibleLayouts.length > 0 &&
+        {flexibleLayouts &&
+          flexibleLayouts.length > 0 &&
           flexibleLayouts.map(block => {
             switch (block.__typename) {
               case "WpPage_Flexlayouts_FlexibleLayouts_ContentBlock":

@@ -2,7 +2,6 @@
 import { jsx, Box, Flex, Container } from "theme-ui"
 import { graphql } from "gatsby"
 import BgImage from "../images/BgImage"
-import YoutubeBackground from "react-youtube-background"
 import ParsedContent from "../../utils/ParsedContent"
 import coverBlockStyles from "../../styles/acfBlocksStyles/coverBlockStyles"
 import sectionsStyles from "../../styles/acfBlocksStyles/sectionsStyles"
@@ -85,11 +84,11 @@ export const CoverBlock = ({
           {content && <Content content={content} />}
         </BgImage>
       )}
-      {background === "video" && (
+      {/* {background === "video" && (
         <YoutubeBackground videoId={video} aspectRatio="16/9">
           {content && <Content content={content} />}
         </YoutubeBackground>
-      )}
+      )} */}
       {background === "gradient" && (
         <Box
           sx={{

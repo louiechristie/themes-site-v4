@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { jsx, Box } from "theme-ui"
-import { Fragment } from "react"
+import { jsx, Box, MenuButton } from "theme-ui"
+import React from "react"
 import { useState } from "react"
 import { Menu as MenuIcon, Close } from "grommet-icons"
 import { Layer, Button } from "grommet"
@@ -8,7 +8,7 @@ import Menu from "./Menu.js"
 
 import slideSidebarStyles from "../../styles/slideSidebarStyles"
 
-const SlideSidebar = () => {
+const SlideSidebar = ({ ...props }) => {
   const [isMenuOpen, setOpenMenu] = useState(false)
   const [openClass, setOpenClass] = useState(false)
 
@@ -22,15 +22,14 @@ const SlideSidebar = () => {
   }
 
   return (
-    <Fragment>
-      <Button
-        icon={<MenuIcon />}
-        a11yTitle="Open navigation menu"
+    <Box {...props}>
+      <MenuButton
+        aria-label="Toggle Menu"
         onClick={openMenu}
         className={openClass ? "btn-menu-opened" : "btn-menu-closing"}
-        sx={{
-          variant: `buttons.hamburger`,
-        }}
+        // sx={{
+        //   variant: `buttons.hamburger`,
+        // }}
       />
       {isMenuOpen && (
         <Layer
@@ -60,7 +59,7 @@ const SlideSidebar = () => {
           <Menu />
         </Layer>
       )}
-    </Fragment>
+    </Box>
   )
 }
 
