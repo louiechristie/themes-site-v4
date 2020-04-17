@@ -26,7 +26,7 @@ const Pagination = ({ pageContext }) => {
         {Array.from({ length: numberOfPages }, (_, i) => (
           <Link
             key={`pagination-number${i + 1}`}
-            to={i === 0 ? `/` : `/${i + 1}`}
+            to={i === 0 ? `/blog` : `blog/${i + 1}`}
           >
             {i + 1}
           </Link>
@@ -34,7 +34,7 @@ const Pagination = ({ pageContext }) => {
       </Box>
 
       <Box sx={{ variant: `menus.prevNextLinks` }}>
-        {humanPageNumber < limit ? (
+        {humanPageNumber <= limit ? (
           <Link to={nextPagePath}>Next Posts</Link>
         ) : (
           <Box sx={{ color: `mutted` }}>Next Posts</Box>

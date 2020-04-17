@@ -21,7 +21,7 @@ module.exports = async ({ actions, graphql }) => {
 
   pages.map(page => {
     createPage({
-      path: `/${page.uri}`,
+      path: `${page.uri}`,
       component: pageTemplate,
       context: {
         uri: page.uri,

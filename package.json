@@ -43,6 +43,7 @@
     "react-headroom": "^3.0.0",
     "react-helmet": "^6.0.0",
     "react-paginate": "^6.3.2",
+    "remove-trailing-slash": "^0.1.0",
     "theme-ui": "^0.3.1"
   },
   "devDependencies": {

@@ -1,4 +1,6 @@
 const config = require("./config")
+const slashes = require("remove-trailing-slash")
+const wpUrl = slashes(config.wordPressUrl)
 
 module.exports = {
   /* Your site config here */
@@ -18,7 +20,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress-experimental`,
       options: {
-        url: `${config.wordPressUrl}/graphql`,
+        url: `${wpUrl}/graphql`,
         verbose: true,
         schema: {
           queryDepth: 5,

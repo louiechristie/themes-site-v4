@@ -7,7 +7,7 @@ import BgImage from "../components/BgImage"
 
 const Blog = ({ data, pageContext }) => {
   const posts = data.allWpPost.nodes
-  const { pageNumber, hasNextPage, itemsPerPage, allPosts } = pageContext
+
   return (
     <Layout>
       <Container sx={{ maxWidth: `l` }}>

@@ -2,7 +2,7 @@
  * @type {{wordPressUrl: string}}
  */
 const config = {
-  wordPressUrl: `https://starter.alexaspalato.website`,
+  wordPressUrl: `https://gatsbywpthemes.gatsby-wp.com/`,
 }
 
 module.exports = config
