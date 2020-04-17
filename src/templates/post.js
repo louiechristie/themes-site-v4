@@ -2,7 +2,7 @@
 import { jsx, Container, Box } from "theme-ui"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
-import BgImage from "../components/BgImage"
+import BgImage from "../components/images/BgImage"
 
 const SinglePOST = ({ data }) => {
   const { content, featuredImage, title } = data.wpPost

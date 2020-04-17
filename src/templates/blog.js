@@ -3,7 +3,7 @@ import { jsx, Container, Box, Flex } from "theme-ui"
 import Layout from "../components/Layout"
 import { graphql, Link } from "gatsby"
 import Pagination from "../components/Pagination"
-import BgImage from "../components/BgImage"
+import BgImage from "../components/images/BgImage"
 
 const Blog = ({ data, pageContext }) => {
   const posts = data.allWpPost.nodes
