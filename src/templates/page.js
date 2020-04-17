@@ -1,7 +1,11 @@
 /** @jsx jsx */
-import { jsx, Box, Container } from "theme-ui"
+import { jsx, Box, Container, Flex } from "theme-ui"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
+// import SEO from "../components/seo/Seo"
+import ParsedContent from "../utils/ParsedContent"
+import articleStyles from "../styles/articleStyles"
+import gutenberg from "../styles/theme-gutenberg"
 import {
   ButtonBlock,
   ContentBlock,
@@ -23,8 +27,15 @@ const Page = ({ data }) => {
   return (
     <Layout>
       <Container>
-        <h1>{title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: content }}></div>
+        <h1
+          className="page-title"
+          dangerouslySetInnerHTML={{ __html: title }}
+        />
+        {content && (
+          <Box className="entry-content" sx={{ ...gutenberg }}>
+            <ParsedContent content={content} />
+          </Box>
+        )}
         {flexibleLayouts.length > 0 &&
           flexibleLayouts.map(block => {
             switch (block.__typename) {

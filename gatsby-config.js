@@ -3,7 +3,35 @@ const slashes = require("remove-trailing-slash")
 const wpUrl = slashes(config.wordPressUrl)
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: "Gatsby WordPress Themes",
+    description: "GGatsby themes designed to work with WordPress",
+    author: "@alexadark",
+    wordPressUrl: config.wordpressUrl,
+    siteUrl: "https://gatsbywpthemes.com/",
+    social: [
+      {
+        name: "twitter",
+        url: "https://twitter.com/gatsbyjs",
+      },
+      {
+        name: "GitHub",
+        url: "https://github.com/gatsbyjs",
+      },
+      {
+        name: "CodePen",
+        url: "https://codepen.io/pehaa",
+      },
+      {
+        name: "Instagram",
+        url: "#",
+      },
+      {
+        name: "Linkedin",
+        url: "#",
+      },
+    ],
+  },
   plugins: [
     `gatsby-plugin-notifications`,
     `gatsby-plugin-sharp`,
