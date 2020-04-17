@@ -1,77 +1,78 @@
-import { rem } from 'polished'
+import { rem } from "polished"
 
 const sharedButtonStyles = {
-  boxSizing: 'border-box !important',
-  border: 'none',
-  color: 'white',
-  cursor: 'pointer',
-  fontFamily: 'body',
-  textTransform: 'uppercase',
-  fontSize: 'xs',
-  variant: 'transitions.m',
+  boxSizing: "border-box !important",
+  border: "none",
+  color: "white",
+  cursor: "pointer",
+  fontFamily: "body",
+  textTransform: "uppercase",
+  fontSize: "xs",
+  variant: "transitions.m",
   letterSpacing: 1,
-  boxShadow: 'medium',
-  lineHeight: 'tight',
-  py: 'xs',
-  px: 'm',
-  borderRadius: 'xs',
+  boxShadow: "medium",
+  lineHeight: "tight",
+  py: "s",
+  px: "m",
+  borderRadius: 30,
   fontWeight: 500,
 
-  '&:hover': {
-    transform: 'translateY(-5px)',
-    boxShadow: 'hover',
+  "&:hover": {
+    transform: "translateY(-5px)",
+    boxShadow: "hover",
     a: {
-      color: 'white',
+      color: "white",
     },
   },
   a: {
-    color: 'white',
-    textDecoration: 'none',
+    color: "white",
+    textDecoration: "none",
   },
-  '&[disabled]': {
+  "&[disabled]": {
     opacity: 0.6,
-    cursor: 'not-allowed',
+    cursor: "not-allowed",
   },
 }
 
 const small = {
   py: 4,
-  px: 'xs',
-  fontSize: 'xxs',
-  fontWeight: 'bold',
+  px: "xs",
+  fontSize: "xxs",
+  fontWeight: "bold",
 }
 const outline = {
   ...sharedButtonStyles,
-  padding: 'xxs',
-  bg: 'transparent',
-  border: '1px solid',
-  color: 'text',
-  fontWeight: 'bold',
-  boxShadow: 'inset 0 0 0 0 currentColor',
-  transition: '.3s',
+  padding: "xxs",
+  bg: "transparent",
+  border: "1px solid",
+  color: "text",
+  fontWeight: "bold",
+  boxShadow: "inset 0 0 0 0 currentColor",
+  transition: ".3s",
   a: {
-    color: 'text',
+    color: "text",
   },
-  ':hover:not([disabled])': {
-    boxShadow: 'inset 0 0 0 2px currentColor',
+  ":hover:not([disabled])": {
+    boxShadow: "inset 0 0 0 2px currentColor",
   },
 }
 
 const primary = {
   ...sharedButtonStyles,
-  bg: 'primary',
+  bg: "primary",
+  variant: ["gradients.primary", "transitions.m"],
 }
 
 const secondary = {
   ...sharedButtonStyles,
-  bg: 'secondary',
+  bg: "secondary",
 }
 const gradientPrimary = {
-  variant: 'gradients.primary',
+  variant: "gradients.primary",
 }
 
 const gradientSecondary = {
-  variant: 'gradients.secondary',
+  variant: "gradients.secondary",
 }
 
 export const buttons = {
@@ -105,19 +106,19 @@ export const buttons = {
     },
   },
   hamburger: {
-    pointer: 'cursor',
-    variant: 'transitions.m',
+    pointer: "cursor",
+    variant: "transitions.m",
     svg: {
-      stroke: 'headerColor',
-      variant: 'transitions.m',
+      stroke: "headerColor",
+      variant: "transitions.m",
     },
 
-    bg: 'transparent',
-    '&:hover svg': {
-      stroke: 'headerColorHover',
+    bg: "transparent",
+    "&:hover svg": {
+      stroke: "headerColorHover",
     },
-    '&.btn-menu-opened': {
-      transform: 'translate3d(4rem, 0, 0)',
+    "&.btn-menu-opened": {
+      transform: "translate3d(4rem, 0, 0)",
     },
   },
 }

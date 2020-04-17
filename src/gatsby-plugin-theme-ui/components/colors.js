@@ -1,4 +1,4 @@
-import { darken } from "polished"
+import { darken, lighten } from "polished"
 
 const dark = "rgb(13, 33, 49)"
 const dark2 = darken(0.04, "rgb(13, 33, 49)")
@@ -20,6 +20,8 @@ export const colors = {
   dark,
   lightGrey,
   accentDark,
+  pink,
+  yellow,
   accent: accentLight,
   background: light,
   bgInverse: dark,
@@ -50,6 +52,8 @@ export const colors = {
   nlButtonBg: primary,
   nlButtonBgHover: darken(0.1, primary),
   nlButtonColor: light,
+  gradientColor1: lighten(0.2, dark),
+  gradientColor2: dark,
 
   modes: {
     dark: {
@@ -62,10 +66,12 @@ export const colors = {
       archiveTitleBg: secondary,
       searchColor: primary,
       accent: accentDark,
-      nlInputBg: primary,
+      nlInputBg: dark,
       nlInputColor: "white",
       nlButtonBg: secondary,
       nlButtonBgHover: darken(0.05, secondary),
+      gradientColor1: dark,
+      gradientColor2: darken(0.08, dark),
     },
   },
 }

@@ -3,7 +3,6 @@ import { jsx, Box, Flex, Container, Button, Close } from "theme-ui"
 import { useState } from "react"
 import Project from "./ProjectItem"
 import { useStaticQuery, graphql } from "gatsby"
-import { Layer } from "grommet"
 import ParsedContent from "../../utils/ParsedContent"
 import projectsBlockStyles from "../../styles/acfBlocksStyles/projectsBlockStyles"
 import sectionsStyles from "../../styles/acfBlocksStyles/sectionsStyles"
@@ -18,6 +17,7 @@ export const projectFragment = graphql`
     slug
     title
     uri
+    termNames
     projectFields {
       projectUrl
       description
@@ -65,9 +65,8 @@ export const ProjectsBlock = ({
     mt: marginTop,
     mb: marginBottom,
   }
-  const [show, setShow] = useState()
+
   const data = useStaticQuery(PROJECTS_QUERY)
-  const allProjects = data.allWpProject.nodes
 
   return (
     <Box
@@ -92,52 +91,6 @@ export const ProjectsBlock = ({
 
         <Flex sx={{ flexWrap: `wrap`, justifyContent: `center` }}>
           {projects && projects.map(project => <Project project={project} />)}
-        </Flex>
-        <Flex sx={{ justifyContent: "center" }}>
-          <Button variant="primary.gradient" onClick={() => setShow(true)}>
-            View all projects
-          </Button>
-          {show && (
-            <Layer
-              onEsc={() => setShow(false)}
-              onClickOutside={() => setShow(false)}
-              position="left"
-              full={true}
-              modal
-              responsive={false}
-              sx={{ ...projectsModalStyles }}
-            >
-              <Box
-                sx={{ ...margins, ...sectionsStyles, ...projectsBlockStyles }}
-                className={`${cssclass || ""} projectsBlock`}
-                {...props}
-              >
-                <Container className="container">
-                  <Close className="close" onClick={() => setShow(false)} />
-
-                  <Box sx={{ textAlign: `center` }}>
-                    {title && <h2 className="title">Projects</h2>}
-
-                    {content && (
-                      <Box className="intro">
-                        <p>
-                          Morbi leo risus, porta ac consectetur ac, vestibulum
-                          at eros. Donec ullamcorper nulla non metus auctor
-                          fringilla. Praesent commodo cursus magna, vel
-                          scelerisque nisl consectetur et.
-                        </p>
-                      </Box>
-                    )}
-                  </Box>
-
-                  <Flex sx={{ flexWrap: `wrap`, justifyContent: `center` }}>
-                    {allProjects &&
-                      allProjects.map(project => <Project project={project} />)}
-                  </Flex>
-                </Container>
-              </Box>
-            </Layer>
-          )}
         </Flex>
       </Container>
     </Box>

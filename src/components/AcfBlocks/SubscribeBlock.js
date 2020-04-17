@@ -4,7 +4,6 @@ import { useState } from "react"
 import { graphql } from "gatsby"
 import ParsedContent from "../../utils/ParsedContent"
 import subscribeBlockStyles from "../../styles/acfBlocksStyles/subscribeBlockStyles"
-import GatsbyImg from "../images/Image"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 import sectionsStyles from "../../styles/acfBlocksStyles/sectionsStyles"
 
@@ -16,9 +15,6 @@ export const fragment = graphql`
     anchor
     marginTop
     marginBottom
-    image {
-      ...AvatarImage
-    }
   }
 `
 
@@ -30,7 +26,6 @@ export const SubscribeBlock = ({
   marginBottom,
   cssclass,
   anchor,
-  image,
   ...props
 }) => {
   const margins = {
@@ -71,8 +66,7 @@ export const SubscribeBlock = ({
             <ParsedContent content={content} />
           </Box>
         )}
-        <Box>
-          {image && <GatsbyImg img={image} />}
+        <Flex className="formContainer">
           {msg ? (
             msg
           ) : (
@@ -90,7 +84,7 @@ export const SubscribeBlock = ({
               </Flex>
             </form>
           )}
-        </Box>
+        </Flex>
       </Container>
     </Box>
   )

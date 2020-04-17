@@ -31,7 +31,7 @@ const Header = () => {
         backgroundSize: "cover",
         // backgroundPositionY: -100,
 
-        height: 250,
+        height: 256,
         "@media  (min-width:1700px)": {
           height: 600,
         },
