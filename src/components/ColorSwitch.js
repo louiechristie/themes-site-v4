@@ -1,11 +1,15 @@
 /** @jsx jsx */
 import { jsx, useColorMode, Box } from "theme-ui"
+import { useEffect } from "react"
 import { Icon } from "react-icons-kit"
 import { iosSunny as sun } from "react-icons-kit/ionicons/iosSunny"
 import { iosMoon as moon } from "react-icons-kit/ionicons/iosMoon"
 
 const ColorSwitch = ({ ...props }) => {
   const [colorMode, setColorMode] = useColorMode("dark")
+  useEffect(() => {
+    setColorMode("dark")
+  }, [])
 
   return (
     <Box
