@@ -6,7 +6,7 @@ export const gradients = {
   },
   secondary: {
     backgroundImage: t =>
-      `linear-gradient(60deg, ${t.colors.primary}, ${t.colors.purple} )`,
+      `linear-gradient(80deg, ${t.colors.secondary}, #245F9C )`,
   },
   cardGradient: {
     backgroundImage: t =>

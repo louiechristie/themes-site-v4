@@ -63,9 +63,9 @@ const Header = () => {
                   listStyleType: "none",
                   mr: 16,
                   a: {
-                    color: "text",
+                    color: "white",
                     textTransform: "uppercase",
-                    fontWeight: 600,
+                    fontWeight: 700,
                     fontSize: "xs",
                     "&:hover": {
                       color: "yellow",

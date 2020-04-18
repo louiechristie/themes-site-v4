@@ -1,4 +1,5 @@
 import { darken, lighten } from "polished"
+import checked from "../../assets/images/check.svg"
 export default {
   ".columnItem": {
     display: "flex",
@@ -29,6 +30,7 @@ export default {
     // color: "textInverse",
     h2: {
       textTransform: "uppercase",
+      mb: 40,
       // color: "light",
     },
     p: { display: "flex", justifyContent: "center" },
@@ -43,7 +45,33 @@ export default {
       borderRadius: 20,
       color: "light",
       h3: {
-        color: "secondary",
+        // color: "secondary",
+        variant: "text.gradient.secondary",
+      },
+    },
+    ul: {
+      display: "flex",
+      flexWrap: "wrap",
+      maxWidth: 600,
+      mt: 40,
+      mx: "auto",
+      justifyContent: "space-between",
+      li: {
+        width: "50%",
+        pr: 20,
+        textTransform: "uppercase",
+        fontSize: "s",
+        fontWeight: 600,
+        listStyleType: "none",
+        position: "relative",
+        "&:before": {
+          content: "''",
+          position: "absolute",
+          left: -35,
+          background: `url(${checked})`,
+          height: 24,
+          width: 24,
+        },
       },
     },
   },

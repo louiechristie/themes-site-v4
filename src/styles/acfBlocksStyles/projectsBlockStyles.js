@@ -28,7 +28,7 @@ export default {
   },
   ".description": {
     color: "light",
-    fontSize: "xs",
+    fontSize: 17,
     mb: 30,
     maxWidth: 350,
     textAlign: "center",
