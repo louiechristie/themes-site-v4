@@ -3,7 +3,7 @@ import { darken, lighten } from "polished"
 const dark = "rgb(13, 33, 49)"
 const dark2 = darken(0.04, "rgb(13, 33, 49)")
 const dark3 = darken(0.1, "rgb(13, 33, 49)")
-const light = "#eceff1"
+const light = "aliceblue"
 const primary = "rgb(137, 25, 248)"
 const secondary = "rgb(29, 192, 219)"
 const yellow = "rgb(254, 195, 56)"
@@ -39,7 +39,7 @@ export const colors = {
   footerBg: dark,
   footerColor: light,
   infoBg: light,
-  cardBg: "white",
+  cardBg: lighten(0.028, "rgb(237, 247, 255)"),
   archiveTitleBg: grey,
   searchResultsHeaderBg: grey,
   searchResultsHeaderColor: "white",
