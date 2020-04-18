@@ -75,10 +75,10 @@ export const SubscribeBlock = ({
                 <Input
                   placeholder="Email address"
                   name="email"
-                  type="text"
+                  type="email"
                   value={email}
                   onChange={handleChange}
-                  sx={{ borderRadius: "5px 0 0 5px" }}
+                  sx={{ borderRadius: "5px 0 0 5px", color: "nlInputColor" }}
                 />
                 <button type="submit">Subscribe</button>
               </Flex>
