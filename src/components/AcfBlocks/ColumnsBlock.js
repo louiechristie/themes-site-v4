@@ -136,7 +136,10 @@ export const ColumnsBlock = ({
                       }}
                     >
                       {columnContent && (
-                        <ParsedContent content={columnContent} />
+                        <ParsedContent
+                          className="content"
+                          content={columnContent}
+                        />
                       )}
                       {button && <Button button={button} />}
                     </BgImage>

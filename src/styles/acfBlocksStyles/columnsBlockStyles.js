@@ -4,6 +4,9 @@ export default {
   ".columnItem": {
     display: "flex",
     alignItems: "center",
+    ">div": {
+      p: 0,
+    },
   },
   "&.section-1": {
     p: { fontSize: "xl" },
@@ -22,6 +25,9 @@ export default {
     },
   },
   "&.plugins": {
+    ".intro": {
+      px: 10,
+    },
     color: "text",
     ".colsWrap": {
       px: [20],
@@ -52,12 +58,14 @@ export default {
     ul: {
       display: "flex",
       flexWrap: "wrap",
-      maxWidth: 600,
+      maxWidth: ["100%", 600],
+      m: 0,
       mt: 40,
       mx: "auto",
+      pl: [100, 0],
       justifyContent: "space-between",
       li: {
-        width: "50%",
+        width: ["100%", "50%"],
         pr: 20,
         textTransform: "uppercase",
         fontSize: "s",

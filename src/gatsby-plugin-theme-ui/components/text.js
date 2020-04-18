@@ -31,12 +31,17 @@ export const text = {
     },
   },
   branding: {
-    fontSize: ["m", "xl"],
     textTransform: "uppercase",
     fontFamily: "heading",
     fontWeight: 500,
-    textAlign: "center",
-    lineHeight: 1.5,
+
+    lineHeight: 1.2,
+    fontSize: ["s", "m", "xl"],
+    h1: {
+      display: "flex",
+      justifyContent: "center",
+      width: ["100%", "auto"],
+    },
 
     m: 0,
     a: {

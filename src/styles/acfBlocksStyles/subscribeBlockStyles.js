@@ -4,7 +4,8 @@ export default {
     mb: 50,
   },
   form: {
-    width: "50%",
+    width: ["100%", "80%", "50%"],
+    px: 20,
   },
   ".formContainer": {
     justifyContent: "center",

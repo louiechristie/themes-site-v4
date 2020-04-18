@@ -1,24 +1,25 @@
 export const header = {
-  bg: 'headerBg',
-  color: 'headerColor',
-  fontWeight: 'bold',
-  margin: 'none',
+  bg: "headerBg",
+  color: "headerColor",
+  fontWeight: "bold",
+  margin: "none",
 
-  '.container': {
-    display: ['flex'],
-    justifyContent: 'space-between',
-    flexWrap: 'wrap',
-    alignItems: 'center',
-    fontSize: 'm',
-    margin: '0 auto',
-    maxWidth: 'container',
+  ".container": {
+    display: ["block", "flex"],
+    justifyContent: ["center", "space-between"],
+    flexWrap: "wrap",
+    alignItems: "center",
+    fontSize: "m",
+    margin: "0 auto",
+    maxWidth: "container",
     py: 30,
-    width: '90vw',
+    px: [10, 30],
+    width: "90vw",
   },
 
-  '.headroom--pinned &': {
-    '>div': {
-      py: 'xxs',
+  ".headroom--pinned &": {
+    ">div": {
+      py: "xxs",
     },
   },
 }

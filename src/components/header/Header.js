@@ -41,7 +41,7 @@ const Header = () => {
       <Container className="container">
         <Box
           sx={{
-            width: [`50%`, `50%`, `33%`],
+            width: [`100%`, `50%`],
             display: `flex`,
           }}
         >
@@ -49,13 +49,16 @@ const Header = () => {
         </Box>
         <Box
           sx={{
-            width: [`50%`, `50%`, `33%`],
+            width: [`100%`, `50%`],
             display: `flex`,
             justifyContent: `flex-end`,
           }}
         >
           <Menu
             sx={{
+              display: "flex",
+              justifyContent: ["center", "flex-end"],
+              width: ["100%", "auto"],
               ul: {
                 display: "Flex",
                 m: 0,
@@ -83,9 +86,6 @@ const Header = () => {
           position: `absolute`,
           right: [`6%`, `6%`, `2%`],
           top: [15, 15, 25],
-          ".headroom--pinned &": {
-            top: [10, 10, 15],
-          },
         }}
       >
         <ColorSwitch />

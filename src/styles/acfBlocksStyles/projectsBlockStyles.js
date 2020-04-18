@@ -4,7 +4,7 @@ export default {
     // display: "flex",
     // justifyContent: "space-between",
     p: {
-      width: "50%",
+      width: ["100%", "80%", "50%"],
       color: "text",
       fontSize: "xl",
       // textAlign: "left",
