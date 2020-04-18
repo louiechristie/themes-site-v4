@@ -16,7 +16,7 @@ const ColorSwitch = ({ ...props }) => {
       onClick={() => setColorMode(colorMode === "default" ? "dark" : "default")}
       {...props}
     >
-      <Box sx={{ color: "light", mt: 10, cursor: "pointer" }}>
+      <Box sx={{ color: "light", mt: 8, cursor: "pointer" }}>
         {colorMode === "dark" ? (
           <Icon size={36} icon={sun} />
         ) : (

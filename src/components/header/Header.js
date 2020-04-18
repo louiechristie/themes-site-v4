@@ -5,6 +5,7 @@ import Menu from "./Menu"
 import SlideSidebar from "./SlideSidebar"
 import SiteBranding from "./SiteBranding"
 import ColorSwitch from "../ColorSwitch"
+
 import blueWaveTop from "../../assets/images/blue-wave-top.svg"
 
 const Header = () => {
@@ -53,7 +54,28 @@ const Header = () => {
             justifyContent: `flex-end`,
           }}
         >
-          <SlideSidebar />
+          <Menu
+            sx={{
+              ul: {
+                display: "Flex",
+                m: 0,
+                li: {
+                  listStyleType: "none",
+                  mr: 16,
+                  a: {
+                    color: "text",
+                    textTransform: "uppercase",
+                    fontWeight: 600,
+                    fontSize: "xs",
+                    "&:hover": {
+                      color: "yellow",
+                    },
+                  },
+                },
+              },
+            }}
+          />
+          {/* <SlideSidebar /> */}
         </Box>
       </Container>
       <Flex

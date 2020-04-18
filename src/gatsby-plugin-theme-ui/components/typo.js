@@ -1,106 +1,106 @@
-import { rem } from 'polished'
+import { rem } from "polished"
 
 export const fonts = {
-  body: 'Montserrat',
-  heading: 'MOntserrat',
+  body: "Titillium Web",
+  heading: "Titillium Web",
 }
 
 export const fontWeights = {
   body: 500,
-  heading: 'black',
+  heading: "black",
   bold: 700,
   black: 900,
 }
 
 export const fontSizes = {
-  xxs: rem('12px'),
-  xs: rem('14px'),
-  s: rem('16px'),
-  m: rem('20px'),
-  l: rem('24px'),
-  xl: rem('32px'),
-  xxl: rem('48px'),
-  Big: rem('64px'),
-  Bigger: rem('96px'),
+  xxs: rem("12px"),
+  xs: rem("14px"),
+  s: rem("16px"),
+  m: rem("20px"),
+  l: rem("24px"),
+  xl: rem("32px"),
+  xxl: rem("48px"),
+  Big: rem("64px"),
+  Bigger: rem("96px"),
 }
 
 export const lineHeights = {
-  body: 1.8,
+  body: 1.6,
   heading: 1.1,
   loose: 2,
   none: 1,
 }
 
 const heading = {
-  fontFamily: 'heading',
-  lineHeight: 'heading',
-  fontWeight: 'heading',
-  color: 'text',
+  fontFamily: "heading",
+  lineHeight: "heading",
+  fontWeight: "heading",
+  color: "text",
   a: {
-    borderBottom: 'none',
+    borderBottom: "none",
   },
 }
 
 export const a = {
-  variant: 'transitions.m',
-  color: 'accent',
-  fontWeight: 'bold',
-  textDecoration: 'none',
-  '&:hover': {
-    color: 'primary',
+  variant: "transitions.m",
+  color: "accent",
+  fontWeight: "bold",
+  textDecoration: "none",
+  "&:hover": {
+    color: "primary",
   },
 }
 
 export const p = {
-  fontSize: ['s'],
-  lineHeight: 'body',
+  fontSize: ["s"],
+  lineHeight: "body",
 }
 
 export const h1 = {
   ...heading,
-  fontSize: ['xl', 'xxl'],
-  mt: 'xxs',
+  fontSize: ["xl", "xxl"],
+  mt: "xxs",
 }
 export const h2 = {
   ...heading,
-  fontSize: ['l', 'xl'],
-  mt: 'xxs',
+  fontSize: ["l", "xl"],
+  mt: "xxs",
 }
 
 export const h3 = {
   ...heading,
-  fontSize: ['m', 'l'],
-  mt: 'xs',
+  fontSize: ["m", "l"],
+  mt: "xs",
 }
 export const h4 = {
   ...heading,
-  fontSize: ['s', 'm'],
+  fontSize: ["s", "m"],
 }
 
 export const h5 = {
   ...heading,
-  fontSize: 'xs',
+  fontSize: "xs",
 }
 export const h6 = {
   ...heading,
-  fontSize: 'xs',
-  color: 'muted',
-  mb: 'xxs',
+  fontSize: "xs",
+  color: "muted",
+  mb: "xxs",
 }
 export const blockquote = {
-  fontStyle: 'italic',
-  bg: 'background',
+  fontStyle: "italic",
+  bg: "background",
   px: [20, 50],
   py: 40,
-  borderLeft: '5px solid',
-  borderColor: 'primary',
-  maxWidth: '800px !important',
-  mx: 'auto',
+  borderLeft: "5px solid",
+  borderColor: "primary",
+  maxWidth: "800px !important",
+  mx: "auto",
 }
 
 export const base = {
-  fontSize: 's',
-  color: 'text',
+  fontSize: "s",
+  color: "text",
   a,
   p,
   h1,

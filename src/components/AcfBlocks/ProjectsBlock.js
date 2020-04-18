@@ -25,15 +25,15 @@ export const projectFragment = graphql`
   }
 `
 
-const PROJECTS_QUERY = graphql`
-  query getProjects {
-    allWpProject(limit: 100) {
-      nodes {
-        ...projectFragment
-      }
-    }
-  }
-`
+// const PROJECTS_QUERY = graphql`
+//   query getProjects {
+//     allWpProject(limit: 100) {
+//       nodes {
+//         ...projectFragment
+//       }
+//     }
+//   }
+// `
 
 export const fragment = graphql`
   fragment projectsBlockFragment on WpPage_Flexlayouts_FlexibleLayouts_ProjectsBlock {
@@ -66,7 +66,7 @@ export const ProjectsBlock = ({
     mb: marginBottom,
   }
 
-  const data = useStaticQuery(PROJECTS_QUERY)
+  // const data = useStaticQuery(PROJECTS_QUERY)
 
   return (
     <Box

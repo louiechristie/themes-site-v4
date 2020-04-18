@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import { graphql, useStaticQuery, Link } from "gatsby"
+import AnchorLink from "react-anchor-link-smooth-scroll"
 import { createLocalLink } from "../../utils"
 
 const MENU_QUERY = graphql`
@@ -34,8 +35,10 @@ const renderLink = menuItem =>
   menuItem.connectedObject.__typename === "WpMenuItem" ? (
     menuItem.url === `/blog` ? (
       <Link to={`/blog`}> {menuItem.label}</Link>
-    ) : menuItem.url === `#` ? (
-      menuItem.label
+    ) : menuItem.url.startsWith(`#`) ? (
+      <AnchorLink offset={25} href={menuItem.url}>
+        {menuItem.label}
+      </AnchorLink>
     ) : (
       <a href={menuItem.url} target="_blank" rel="noopener noreferrer">
         {menuItem.label}
@@ -71,13 +74,13 @@ const renderSubMenu = menuItem => {
   )
 }
 
-const Menu = () => {
+const Menu = ({ ...props }) => {
   const data = useStaticQuery(MENU_QUERY)
   const { menuItems } = data.wpMenu
 
   if (menuItems) {
     return (
-      <nav sx={{ variant: `menus.header` }}>
+      <nav sx={{ variant: `menus.header` }} {...props}>
         <ul role="menu">
           {data.wpMenu.menuItems.nodes.map(menuItem => {
             if (menuItem.childItems.nodes.length) {

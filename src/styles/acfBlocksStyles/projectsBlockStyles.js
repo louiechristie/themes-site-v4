@@ -37,6 +37,7 @@ export default {
   },
   button: {
     px: 40,
+    py: 12,
   },
   ".button": {
     justifyContent: `center`,

@@ -67,7 +67,7 @@ export const ColumnsBlock = ({
         return Number(columnsNumber)
     }
   }
-  console.log("number", number(columnsNumber))
+
   return (
     <Box
       as="section"
