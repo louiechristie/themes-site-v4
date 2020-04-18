@@ -112,5 +112,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-netlify-cache`,
+    {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint:
+          "https://gmail.us20.list-manage.com/subscribe/post?u=264367957087f30a2e5e30279&amp;id=338936df19",
+      },
+    },
   ],
 }
