@@ -1,8 +1,8 @@
 import { rem } from "polished"
 
 export const fonts = {
-  body: "Titillium Web",
-  heading: "Titillium Web",
+  body: "Titillium Web, sans-serif",
+  heading: "Titillium Web, sans-serif",
 }
 
 export const fontWeights = {
