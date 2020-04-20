@@ -30,4 +30,5 @@ export default {
     letterSpacing: 1.2,
     variant: ["gradients.primary", "transitions.m"],
   },
+  color: "text",
 }
