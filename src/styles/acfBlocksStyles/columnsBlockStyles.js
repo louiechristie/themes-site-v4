@@ -25,6 +25,22 @@ export default {
     },
   },
   "&.plugins": {
+    a: {
+      variant: "transitions.m",
+      color: "light",
+
+      textDecoration: "none",
+      position: "relative",
+      fontWeight: 400,
+      background:
+        "linear-gradient(to bottom, rgb(230, 74, 145) 0%, rgb(230, 74, 145) 100%)",
+      backgroundPosition: "0 100%",
+      backgroundRepeat: "repeat-x",
+      backgroundSize: "1px 1px",
+      "&:hover": {
+        backgroundSize: "1px 13px",
+      },
+    },
     ".intro": {
       px: 10,
     },
@@ -39,9 +55,11 @@ export default {
       mb: 40,
       // color: "light",
     },
-    p: { display: "flex", justifyContent: "center" },
+
     img: {
+      mx: "auto",
       maxWidth: 80,
+      display: "block",
     },
     h3: {
       fontSize: 18,

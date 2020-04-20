@@ -1,45 +1,45 @@
 export default {
-  mb: 'l',
-  '.fullWidth &': {
+  mb: "l",
+  ".fullWidth &": {
     mb: -33,
   },
-  width: '100%',
-  '.gatsby-image-wrapper': {
+  width: "100%",
+  ".gatsby-image-wrapper": {
     maxHeight: 400,
-    boxShadow: 'small',
-    borderRadius: '5px 5px 0 0',
+    boxShadow: "small",
+    borderRadius: "5px 5px 0 0",
   },
 
-  '.content': {
-    '.fullWidth &': {
-      variant: 'card.remove',
-      boxShadow: 'none',
+  ".content": {
+    ".fullWidth &": {
+      variant: "card.remove",
+      boxShadow: "none",
     },
-    variant: 'card.default',
+    variant: "card.default",
 
-    borderRadius: ['0 0 5px 5px'],
-    '&.page-content, &.no-img': {
-      borderRadius: ['s'],
+    borderRadius: ["0 0 5px 5px"],
+    "&.page-content, &.no-img": {
+      borderRadius: ["s"],
     },
 
-    overflowWrap: 'break-word',
-    wordWrap: 'break-word',
-    hyphens: 'auto',
-    '.entry-title': {
+    overflowWrap: "break-word",
+    wordWrap: "break-word",
+    hyphens: "auto",
+    ".entry-title": {
       a: {
-        color: 'text',
-        '&:hover': {
-          color: 'accent',
+        color: "text",
+        "&:hover": {
+          color: "accent",
         },
       },
     },
   },
-  '.entry-content': {
-    my: 'l',
+  ".entry-content": {
+    my: "l",
   },
-  '.entry-title': {
-    textTransform: 'uppercase',
-    fontSize: ['m', 'l'],
+  ".entry-title": {
+    textTransform: "uppercase",
+    fontSize: ["m", "l"],
 
     a: {},
   },

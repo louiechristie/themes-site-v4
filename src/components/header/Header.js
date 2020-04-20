@@ -34,7 +34,7 @@ const Header = () => {
 
         height: 256,
         "@media  (min-width:1700px)": {
-          height: 600,
+          height: 350,
         },
       }}
     >
@@ -85,7 +85,7 @@ const Header = () => {
         sx={{
           position: `absolute`,
           right: [`6%`, `6%`, `2%`],
-          top: [15, 15, 25],
+          top: 18,
         }}
       >
         <ColorSwitch />
