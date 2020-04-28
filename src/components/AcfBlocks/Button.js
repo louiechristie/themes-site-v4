@@ -18,7 +18,6 @@ export const ContentButton = ({ button, buy, ...props }) => {
           data-item-price="199"
           data-item-payment-interval="Year"
           data-item-payment-interval-count="1"
-          data-item-payment-trial="7"
           sx={{ variant: "buttons.primary", fontWeight: 600 }}
         >
           Buy the themes bundle!
