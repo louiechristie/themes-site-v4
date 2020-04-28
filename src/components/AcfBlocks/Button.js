@@ -14,7 +14,7 @@ export const ContentButton = ({ button, buy, ...props }) => {
           class="snipcart-add-item"
           data-item-name="Themes Bundle"
           data-item-id="bundle"
-          data-item-url="https://new-theme-snipcart.netlify.com"
+          data-item-url="https://new-theme-snipcart.netlify.app"
           data-item-price="199"
           data-item-payment-interval="Year"
           data-item-payment-interval-count="1"
