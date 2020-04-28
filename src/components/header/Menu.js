@@ -89,6 +89,7 @@ const Menu = ({ ...props }) => {
               return renderMenuItem(menuItem)
             }
           })}
+          <li class="snipcart-checkout menu-item"> checkout</li>
         </ul>
       </nav>
     )
