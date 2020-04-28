@@ -2,6 +2,11 @@ const config = require("./config")
 const slashes = require("remove-trailing-slash")
 const wpUrl = slashes(config.wordPressUrl)
 
+const path = require("path")
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: "Gatsby WordPress Themes",
@@ -117,6 +122,13 @@ module.exports = {
       options: {
         endpoint:
           "https://gmail.us20.list-manage.com/subscribe/post?u=264367957087f30a2e5e30279&amp;id=338936df19",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-snipcart",
+      options: {
+        apiKey: process.env.SNIPCART_API,
+        autopop: true,
       },
     },
   ],

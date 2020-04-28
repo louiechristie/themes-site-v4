@@ -25,6 +25,7 @@ export const fragment = graphql`
       columnVerticalPadding
       textColor
       bgColor
+      buy
       button {
         target
         title
@@ -108,6 +109,7 @@ export const ColumnsBlock = ({
                 bgColor,
                 button,
                 icon,
+                buy,
               } = col
 
               return (
@@ -162,7 +164,7 @@ export const ColumnsBlock = ({
                           }}
                         >
                           <ParsedContent content={columnContent} />
-                          {button && <Button button={button} />}
+                          {button && <Button button={button} buy={buy} />}
                         </Box>
                       )}
                     </Box>
