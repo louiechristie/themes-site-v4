@@ -80,7 +80,7 @@ const Menu = ({ ...props }) => {
 
   if (menuItems) {
     return (
-      <nav sx={{ variant: `menus.header` }} {...props}>
+      <nav sx={{ variant: `menus.header`, ...styles }} {...props}>
         <ul role="menu">
           {data.wpMenu.menuItems.nodes.map(menuItem => {
             if (menuItem.childItems.nodes.length) {
@@ -89,7 +89,7 @@ const Menu = ({ ...props }) => {
               return renderMenuItem(menuItem)
             }
           })}
-          <li class="snipcart-checkout menu-item"> checkout</li>
+          <li class="snipcart-checkout menu-item">View Cart</li>
         </ul>
       </nav>
     )
@@ -99,3 +99,12 @@ const Menu = ({ ...props }) => {
 }
 
 export default Menu
+const styles = {
+  ".snipcart-checkout": {
+    textTransform: "uppercase",
+    fontSize: "0.875rem",
+    m: 0,
+    mt: 3,
+    cursor: "pointer",
+  },
+}

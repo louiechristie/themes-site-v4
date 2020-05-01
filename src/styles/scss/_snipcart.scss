@@ -1,0 +1,45 @@
+$dark: rgb(13, 33, 49);
+$dark2: darken(rgb(13, 33, 49), 0.4);
+$dark3: darken(rgb(13, 33, 49), 0.1);
+$light: aliceblue;
+$primary: rgb(137, 25, 248);
+$secondary: rgb(29, 192, 219);
+$yello: rgb(254, 195, 56);
+$pink: rgb(230, 74, 145);
+$lightGrey: #cfd8dc;
+$grey: #90a4ae;
+$accentDark: rgb(230, 74, 145);
+$accentLight: rgb(230, 74, 145);
+
+.snip-header,
+.snip-footer {
+  background: darken(rgb(137, 25, 248), 15%) !important;
+}
+.snip-header {
+  &__total {
+    background: rgb(254, 195, 56) !important;
+    &-label {
+      color: rgb(13, 33, 49) !important;
+    }
+  }
+}
+#snipcart-amount {
+  color: rgb(13, 33, 49);
+}
+.snip-table__cell--success {
+  color: rgb(137, 25, 248) !important;
+}
+
+.snip-layout .snip-product__remove,
+.snip-layout .snip-discount__remove {
+  color: rgb(230, 74, 145) !important;
+}
+
+.snip-layout .snip-footer__copyright {
+  color: aliceblue !important;
+}
+
+.snip-layout .snip-btn {
+  background: rgb(254, 195, 56) !important;
+  color: rgb(13, 33, 49) !important;
+}
