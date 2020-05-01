@@ -24,19 +24,21 @@ export const ContentButton = ({ button, buy, ...props }) => {
           Buy the themes bundle!
         </Button>
       ) : (
-        <Button>
+        <>
           {target === "_blank" ? (
             <a href={url} target="_blank">
-              {title}
+              <Button>{title}</Button>
             </a>
           ) : url.startsWith("#") ? (
             <AnchorLink href={url} offset={25}>
-              {title}
+              <Button>{title}</Button>
             </AnchorLink>
           ) : (
-            <Link to={buttonUrl}>{title}</Link>
+            <Button>
+              <Link to={buttonUrl}>{title}</Link>
+            </Button>
           )}
-        </Button>
+        </>
       )}
     </Flex>
   )

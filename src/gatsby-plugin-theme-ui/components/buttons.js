@@ -15,13 +15,14 @@ const sharedButtonStyles = {
   py: "s",
   px: "m",
   borderRadius: 30,
-  fontWeight: 500,
+  fontWeight: "bold",
 
   "&:hover": {
     transform: "translateY(-5px)",
     boxShadow: "hover",
     a: {
       color: "white",
+      fontWeight: "bold",
     },
   },
   a: {
