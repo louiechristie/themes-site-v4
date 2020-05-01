@@ -35,11 +35,9 @@ const ProjectItem = ({ project }) => {
             </Flex>
           )}
           <Flex className="button">
-            <Button variant="primary">
-              <a href={projectUrl} target="_blank" rel="noopener noreferrer">
-                Visit Live Demo
-              </a>
-            </Button>
+            <a href={projectUrl} target="_blank" rel="noopener noreferrer">
+              <Button variant="primary">Visit Live Demo</Button>
+            </a>
           </Flex>
         </Box>
       </Flex>
