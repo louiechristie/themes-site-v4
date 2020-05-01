@@ -1,26 +1,24 @@
 /** @jsx jsx */
 import { jsx, useColorMode, Box } from "theme-ui"
-import { useEffect } from "react"
 import { Icon } from "react-icons-kit"
 import { iosSunny as sun } from "react-icons-kit/ionicons/iosSunny"
 import { iosMoon as moon } from "react-icons-kit/ionicons/iosMoon"
 
 const ColorSwitch = ({ ...props }) => {
-  const [colorMode, setColorMode] = useColorMode("dark")
-  useEffect(() => {
-    setColorMode("dark")
-  }, [])
+  const [colorMode, setColorMode] = useColorMode()
 
   return (
     <Box
-      onClick={() => setColorMode(colorMode === "default" ? "dark" : "default")}
+      onClick={() =>
+        setColorMode(colorMode === "default" ? "light" : "default")
+      }
       {...props}
     >
       <Box sx={{ color: "light", mt: 8, cursor: "pointer" }}>
-        {colorMode === "dark" ? (
-          <Icon size={36} icon={sun} />
-        ) : (
+        {colorMode === "light" ? (
           <Icon size={36} icon={moon} />
+        ) : (
+          <Icon size={36} icon={sun} />
         )}
       </Box>
     </Box>
